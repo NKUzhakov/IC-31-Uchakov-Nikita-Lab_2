@@ -1,19 +1,23 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-.homePageBody p{
+main > p{
     text-indent: 50px;
 }
-.homePageBody {
-    font-size: 20px;
+.Body{
+    
     background-image: url('images/background\ 1.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    min-height: 1000px;
+}
+.styledFontBody {    
+    font-size: 20px;
 }
 /*----------------------------- Main Menu -----------------------------*/
 .mainMenu{
     background-color: #636363;    
-    /*box-shadow: 0 7px 5px grey;    */
+    box-shadow: 0 7px 5px grey;  
 }
 .mainMenu img[src*="cart icon"]{
     float: right;
@@ -45,7 +49,7 @@
     color: black;
     text-align: center;
     
-    padding: 14px 30px;
+    padding: 14px 30px;    
     text-decoration: none;
     font-size: 30px;
 }
@@ -53,6 +57,10 @@
     background-color: #FAE52C;
     border-radius: 5px;
     transition: background-color 0.8s;
+}
+.currentPage{
+    background-color: tomato;
+    border-radius: 5px;    
 }
 /*----------------------------- Home page adv -----------------------------*/
  .advertisement{
@@ -62,13 +70,6 @@
     height: 28%;
     box-shadow: 0 10px 5px rgb(103, 103, 103);
 }
-/*.advertisement img{
-    margin: 0;
-    width: 50%;
-    height: 28%;
-    float: left;
-    display: inline-block;
-}*/
 .advElement{
     width: 49.85%;
     height: 600px;
@@ -98,9 +99,10 @@
     font: italic bold 30px 'Brush Script MT', cursive;
     color: #d1af02;
     background-color: #636363;
-    border: 2px solid black;
     padding: 5px 10px;
-    border-radius: 5px;    
+
+    border: 2px solid black;    
+    border-radius: 5px;  
 }
 /*----------------------------- Table info -----------------------------*/
 .infoTable{
@@ -148,25 +150,32 @@
 /*----------------------------------------------------------*/
 /*----------------------------- Pizza -----------------------------*/
 /*----------------------------------------------------------*/
+.pizzaCatalog{    
+    margin-left: 6%;
+    width: 88%;       
+}
 .pizzaOffer{
     position: relative;
-    width:250px;
-    height:320px;
+    display: inline-block;
+    float: left;
+    width:230px;
+    height:300px;
     margin: 40px;
     box-shadow: 7px 7px 5px 6px gray;
     border-radius: 0 0 10px 10px;
 }
 .pizzaDisplay{
     width:100%;
-    height:70%;
+    height:65%;
 }
 .parameter{
     position: absolute;
     display: block;
-    width: 60px;
+    width: 50px;
     background-color: white;
+    border: 1px solid black;
     border-radius: 5px;
-    
+    padding: 0 5px;
     right: 0;
 }
 .mass{
@@ -175,11 +184,56 @@
 .diameter{
     margin: 35px 10px 0 0;
 }
-
 .pizzaDisplay img{
     width: 100%;
     height: 100%;
 }
-.pizzaDescription{
 
+.pizzaName{
+    position: absolute;
+    bottom: 55%;
+    margin-left: 20px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.pizzaPrice{
+    display: inline-block;
+    bottom: 55%;
+    margin-left: 20px;
+    font-size: 20px;
+    vertical-align: top;
+}
+.orderButton{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    margin-right: 20px;
+
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #d1af02;    
+    font-size: 22px;
+    transition: background-color 0.8s;
+}
+.orderButton:hover{
+    background-color: #eeea25;
+}
+.pizzaDescription{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+/*----------------------------------------------------------*/
+/*----------------------------- Registration Page -----------------------------*/
+/*----------------------------------------------------------*/
+.registrationForm{
+    margin-top: 50px;
+    box-shadow: 7px 7px 5px gray inset;
+}
+.registrationForm input{
+    width: 220px;
+    height: 25px;
 }

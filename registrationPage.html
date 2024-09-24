@@ -5,27 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/3748/3748309.png">
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    
-    
-    th, td{
-        border: 1px solid black;
-        border-radius: 15px;
-        background-color: rgb(205, 200, 193);
-        padding: 15px;
-    }
-</style>
-<body>
-    <header></header>
+
+<body class="Body styledFontBody">
+    <header>
+        <div class="mainMenu">
+            <img src="images/pizza icon.png" alt="Pizza icon" > 
+            <ul>
+                <li><a href="index.html">Київська піцерія</a></li>
+                <li><a href="menuPage.html">Каталог піц</a></li>
+                <li><a href="workerDesccriptionPage.html">Про наших працівників</a></li>
+                <li class="currentPage"><a href="registrationPage.html">Зареєструватися</a></li>                
+            </ul>
+            <img src="images/cart icon.svg" alt="Cart" >
+        </div>              
+    </header>
     <main>
-        <h1>Сторінка реєстрації</h1>
-        <p>На цій сторінці в майбутньому ви зможете зареєструватися</p>
-        <table>
-            <tr>
-                <td><a href="index.html">На головну</a> </td>
-            </tr>
-        </table>
+        <form class="registrationForm">
+            <fieldset >
+                <!-- <legend>Задати питання можна тут</legend> -->
+                <h4>Сторінка реєстрації</h4>
+                Ваше прізвище та ім'я:<br>
+                <input type="text" name="userSurnameAndName" placeholder="Прізвище Ім'я" required> <br>
+                Ваша електронна пошта:<br>
+                <input type="email"name="userEmail" placeholder="email"required> <br>
+                Ваш пароль:<br>
+                <input type="password" name="userPassword" placeholder="Пароль" required> <br>            
+                <input type="submit" value="Зареєструватися">
+            </fieldset>
+        </form>                
     </main>
     <footer></footer>
 </body>
