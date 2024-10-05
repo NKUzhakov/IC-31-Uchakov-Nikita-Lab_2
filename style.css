@@ -16,44 +16,53 @@ main > p{
 }
 /*----------------------------- Main Menu -----------------------------*/
 .mainMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     background-color: #636363;    
     box-shadow: 0 7px 5px grey;  
 }
-.mainMenu img[src*="cart icon"]{
-    float: right;
-    margin: 5px 5px 0 0;
-    width: 60px;
-    height: 60px;
-    vertical-align: top;
+.mainMenu img{
+    margin: 10px;
 }
-.mainMenu img[src*="pizza icon"]{
-    width: 60px;
-    height: 60px;
-    margin: 5px 0 0 5px;
-    vertical-align: top;    
+.icon {
+    display: flex;
 }
+.iconBasket {
+    justify-content: flex-end;    
+}
+.iconBasket:hover{
+    background-color: #FAE52C;
+    border-radius: 5px;
+    transition: background-color 0.8s;
+}
+
 .mainMenu ul{
-    /*background-color: #636363;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
     text-align: center;
     list-style-type: none;
-    overflow: hidden;
-    margin: 4px 0 0 0;        
+    margin: 0;        
     padding: 0;
-    display: inline-block;
 }
-.mainMenu li {
-    float: left;       
+.mainMenu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .mainMenu li a{
     display: inline-block;
     color: black;
     text-align: center;
     
-    padding: 14px 30px;    
+    padding: 26px 30px;
     text-decoration: none;
     font-size: 30px;
 }
-.mainMenu li a:hover{
+.mainMenu li:hover{
     background-color: #FAE52C;
     border-radius: 5px;
     transition: background-color 0.8s;
@@ -62,31 +71,42 @@ main > p{
     background-color: tomato;
     border-radius: 5px;    
 }
+
+@media(max-width:1370px){
+    .mainMenu ul{
+        flex: 60%
+    }
+    .mainMenu li{
+        flex: 50%
+    }
+    .mainMenu .icon {
+        flex: 20%;        
+    }
+    .mainMenu li a{
+        padding: 10px 30px;
+    }    
+}
 /*----------------------------- Home page adv -----------------------------*/
  .advertisement{
-    border-bottom: 5px solid black;
-    display: inline-block;
-    width: 100%;
-    height: 28%;
+    display: flex;   
+    border-bottom: 5px solid black;    
+    width: 100%;    
     box-shadow: 0 10px 5px rgb(103, 103, 103);
 }
 .advElement{
-    width: 49.85%;
-    height: 600px;
-    float: left;
-    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;       
     background-position: center;
-    background-size: 100% 100%;    
+    background-size: 100% 100%;      
 }
-.advElement1{
-    background-image: url('images/pizza\ adv\ 1.webp');
+.advElement img{
+    width: 100%;
+    height: 100%;
 }
-.advElement2{
-    background-image: url('images/pizza\ adv\ 2.webp');
-}
-.advElement1 + .advElement2{
+.advertisement div + div{
     border-left: 5px solid black;
 }
+
 /*----------------------------- Pizzeria description -----------------------------*/
 #pizzeriaDescription{
     font-size: 23px;
@@ -104,22 +124,31 @@ main > p{
     border: 2px solid black;    
     border-radius: 5px;  
 }
-/*----------------------------- Table info -----------------------------*/
-.infoTable{
-    margin-left: 30%;
-    background-color: rgba(103, 103, 103, 0.2) ;
-    width: 40%;
-    box-shadow: 7px 7px 5px gray;
-    transition: background-color 1s;
+/*----------------------------- Main information -----------------------------*/
+.mainInformation{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
 }
-.infoTable td{
-    text-align: center;    
+.mainInformationItem{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    transition: border-color 0.8s;
 }
-.infoTable tr:hover th{
-    background-color: #8a7302;;
+.mainInformationItem p{
+    font-size: 23px;
+    margin-left: 20px;
 }
-.infoTable tr:hover td{
-    background-color: rgb(101, 101, 101);
+.mainInformationItem:hover{
+    border-color: #8a7302;
+    
 }
 /*----------------------------- Pizza list -----------------------------*/
 .pizzaList{
@@ -140,27 +169,77 @@ main > p{
 .pizzaListItems ul{
     list-style-image: url('images/pizza\ piece\ icon.png') ;
 } 
+@media(max-width:1100px){
+    .pizzaList{
+        width: 40%;
+        margin-left: 30%;
+    }
+}
 /*----------------------------- User form -----------------------------*/
-.userForm{
+.userForm{   
     width:30%;
     box-shadow: 7px 7px 5px gray ;
     background-image: url('images/background\ 3.jpg');
     background-size: 100% 100%;
 }
+
+.userForm input[type*="text"], .userForm input[type*="email"], textarea{    
+    width:90%; 
+    height: 25px;
+    margin-left: 5%;    
+    box-shadow:5px 5px 5px gray inset;
+    background-color: rgb(245, 243, 192);   
+}
+.userForm textarea{
+    height: 300px;
+}
+.userForm p{
+    margin-left: 5%;
+}
+.userForm input[type*="submit"]{
+    width:40%;
+    margin-left: 30%;
+}
+@media(max-width:1000px){
+    .userForm{   
+        width:45%;
+    }
+}
 /*----------------------------------------------------------*/
 /*----------------------------- Pizza -----------------------------*/
 /*----------------------------------------------------------*/
-.pizzaCatalog{    
-    margin-left: 6%;
-    width: 88%;       
+.pizzaType{
+    display: flex;  
+    flex-direction: column; 
+    justify-content: center;   
+
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-top: 2px solid #636363;
 }
+.pizzaType>p{
+    font-size: 24px;
+    font-weight: 900;
+}
+.pizzaCatalog{         
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 80px;
+}
+
 .pizzaOffer{
-    position: relative;
-    display: inline-block;
-    float: left;
+    position: relative;    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
     width:230px;
-    height:300px;
-    margin: 40px;
+    height:300px;    
+    background-color: white;
     box-shadow: 7px 7px 5px 6px gray;
     border-radius: 0 0 10px 10px;
 }
@@ -189,27 +268,30 @@ main > p{
     height: 100%;
 }
 
-.pizzaName{
-    position: absolute;
-    bottom: 55%;
-    margin-left: 20px;
+
+.pizzaDescription{    
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;    
+}
+.pizzaName{    
+    margin: 15px 0 0 0;
     font-size: 22px;
     font-weight: 500;
 }
-.pizzaPrice{
-    display: inline-block;
-    bottom: 55%;
-    margin-left: 20px;
-    font-size: 20px;
-    vertical-align: top;
-}
-.orderButton{
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 25%;
-    margin-right: 20px;
 
+.orderInfo{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.pizzaPrice{    
+    font-size: 20px;
+    
+}
+.orderButton{    
     border-style: none;
     border-radius: 5px;
     padding: 5px;
@@ -220,11 +302,7 @@ main > p{
 .orderButton:hover{
     background-color: #eeea25;
 }
-.pizzaDescription{
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
-}
+
 
 /*----------------------------------------------------------*/
 /*----------------------------- Registration Page -----------------------------*/
@@ -236,4 +314,44 @@ main > p{
 .registrationForm input{
     width: 220px;
     height: 25px;
+}
+/*----------------------------------------------------------*/
+/*----------------------------- Cart Page -----------------------------*/
+/*----------------------------------------------------------*/
+.buyerOrder{
+    display: flex;  
+    flex-direction: column; 
+    justify-content: center;   
+
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+.buyerOrder>p{
+    font-size: 24px;
+    font-weight: 900;
+}
+.orderList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 80px;
+}
+.quantity{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 20px;
+}
+.changeQuantity{
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #d1af02;
+    text-align: center;
+    width: 15px;
+}
+.orderList .orderInfo{
+    height: 45px;
 }

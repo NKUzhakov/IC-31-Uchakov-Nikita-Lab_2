@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/3748/3748309.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="Body">
     <header>
         <div class="mainMenu">
-            <img src="images/pizza icon.png" alt="Pizza icon" > 
+            <div class="icon"><img src="images/pizza icon.png" alt="Pizza icon" > </div>
+            
             <ul>
                 <li><a href="index.html">Київська піцерія</a></li>
                 <li class="currentPage"><a href="menuPage.html">Каталог піц</a></li>
-                <li><a href="workerDesccriptionPage.html">Про наших працівників</a></li>
+                <li><a href="workerDesccriptionPage.html">Про наших працівниців</a></li>
                 <li><a href="registrationPage.html">Зареєструватися</a></li>                
             </ul>
-            <img src="images/cart icon.svg" alt="Cart" >
-        </div>
-                
+            <div class="icon iconBasket">
+                <div ><a href="./cartPage.html"><img  src="images/cart icon.svg" alt="Cart" ></a> </div>                
+            </div>            
+        </div>                
     </header>
     <main>
-        <section class="pizzaCatalog">
+        <div class="pizzaType">
+            <p>Класичні піци</p> 
+        <section class="pizzaCatalog">            
             <div class="pizzaOffer">
                 <div class="pizzaDisplay">
                     <p class="parameter mass">400г</p>
@@ -32,8 +37,10 @@
                 </div>            
                 <div class="pizzaDescription">
                     <p class="pizzaName">Маргарита</p>
-                    <p class="pizzaPrice">250 грн</p>
-                    <button class="orderButton">В коробку</button>
+                    <div class="orderInfo">
+                        <p class="pizzaPrice">250 грн</p>
+                        <button class="orderButton">В коробку</button>
+                    </div>                    
                 </div>            
             </div>
 
@@ -45,8 +52,10 @@
                 </div>            
                 <div class="pizzaDescription">
                     <p class="pizzaName">Пепероні</p>
-                    <p class="pizzaPrice">300 грн</p>
-                    <button class="orderButton">В коробку</button>
+                    <div class="orderInfo">
+                        <p class="pizzaPrice">300 грн</p>
+                        <button class="orderButton">В коробку</button>
+                    </div>                    
                 </div>            
             </div>
 
@@ -58,8 +67,10 @@
                 </div>            
                 <div class="pizzaDescription">
                     <p class="pizzaName">Капрічоза</p>
-                    <p class="pizzaPrice">300 грн</p>
-                    <button class="orderButton">В коробку</button>
+                    <div class="orderInfo">
+                        <p class="pizzaPrice">300 грн</p>
+                        <button class="orderButton">В коробку</button>    
+                    </div>                    
                 </div>            
             </div>
 
@@ -71,11 +82,19 @@
                 </div>            
                 <div class="pizzaDescription">
                     <p class="pizzaName">Діабола</p>
-                    <p class="pizzaPrice">230 грн</p>
-                    <button class="orderButton">В коробку</button>
+                    <div class="orderInfo">
+                        <p class="pizzaPrice">230 грн</p>
+                        <button class="orderButton">В коробку</button>
+                    </div>
+                    
                 </div>            
             </div>
-
+        </section>
+        </div>
+        
+        <div  class="pizzaType">
+            <p>М'ясні піци</p>
+        <section class="pizzaCatalog">
             <div class="pizzaOffer">
                 <div class="pizzaDisplay">
                     <p class="parameter mass">500г</p>
@@ -84,78 +103,102 @@
                 </div>            
                 <div class="pizzaDescription">
                     <p class="pizzaName">М'ясна піца</p>
-                    <p class="pizzaPrice">450 грн</p>
-                    <button class="orderButton">В коробку</button>
+                    <div class="orderInfo">
+                        <p class="pizzaPrice">450 грн</p>
+                        <button class="orderButton">В коробку</button>
+                    </div>
+                    
                 </div>            
             </div>
-
-            <div class="pizzaOffer">
-                <div class="pizzaDisplay">
-                    <p class="parameter mass">350г</p>
-                    <p class="parameter diameter">30см</p>
-                    <img src="images/Тунець з цибулею.webp" alt="Тунець з цибулею">
-                </div>            
-                <div class="pizzaDescription">
-                    <p class="pizzaName">Тунець з цибулею</p>
-                    <p class="pizzaPrice">300 грн</p>
-                    <button class="orderButton">В коробку</button>
-                </div>            
-            </div>
-
-            <div class="pizzaOffer">
-                <div class="pizzaDisplay">
-                    <p class="parameter mass">400г</p>
-                    <p class="parameter diameter">30см</p>
-                    <img src="images/Фрутті ді маре.jpg" alt="Фрутті ді маре">
-                </div>            
-                <div class="pizzaDescription">
-                    <p class="pizzaName">Фрутті ді маре</p>
-                    <p class="pizzaPrice">450 грн</p>
-                    <button class="orderButton">В коробку</button>
-                </div>            
-            </div>
-
-            <div class="pizzaOffer">
-                <div class="pizzaDisplay">
-                    <p class="parameter mass">400г</p>
-                    <p class="parameter diameter">25см</p>
-                    <img src="images/Неаполітанська піца.jpg" alt="Неаполітанська піца">
-                </div>            
-                <div class="pizzaDescription">
-                    <p class="pizzaName">Неаполітанська піца</p>
-                    <p class="pizzaPrice">250 грн</p>
-                    <button class="orderButton">В коробку</button>
-                </div>            
-            </div>
-
-            <div class="pizzaOffer">
-                <div class="pizzaDisplay">
-                    <p class="parameter mass">300г</p>
-                    <p class="parameter diameter">25см</p>
-                    <img src="images/Сицилійська піца.jpg" alt="Сицилійська піца">
-                </div>            
-                <div class="pizzaDescription">
-                    <p class="pizzaName">Сицилійська піца</p>
-                    <p class="pizzaPrice">250 грн</p>
-                    <button class="orderButton">В коробку</button>
-                </div>            
-            </div>
-
-            <div class="pizzaOffer">
-                <div class="pizzaDisplay">
-                    <p class="parameter mass">300г</p>
-                    <p class="parameter diameter">25см</p>
-                    <img src="images/Чиказька піца.jfif" alt="Чиказька піца">
-                </div>            
-                <div class="pizzaDescription">
-                    <p class="pizzaName">Чиказька піца</p>
-                    <p class="pizzaPrice">250 грн</p>
-                    <button class="orderButton">В коробку</button>
-                </div>            
-            </div>
-            
-        </section>        
+        </section>
+        </div>
         
+        <div  class="pizzaType">
+            <p>Піци з морепродуктами</p>
+            <section class="pizzaCatalog">
+                <div class="pizzaOffer">
+                    <div class="pizzaDisplay">
+                        <p class="parameter mass">350г</p>
+                        <p class="parameter diameter">30см</p>
+                        <img src="images/Тунець з цибулею.webp" alt="Тунець з цибулею">
+                    </div>            
+                    <div class="pizzaDescription">
+                        <p class="pizzaName">Тунець з цибулею</p>
+                        <div class="orderInfo">
+                            <p class="pizzaPrice">300 грн</p>
+                            <button class="orderButton">В коробку</button>
+                        </div>
+                        
+                    </div>            
+                </div>
+    
+                <div class="pizzaOffer">
+                    <div class="pizzaDisplay">
+                        <p class="parameter mass">400г</p>
+                        <p class="parameter diameter">30см</p>
+                        <img src="images/Фрутті ді маре.jpg" alt="Фрутті ді маре">
+                    </div>            
+                    <div class="pizzaDescription">
+                        <p class="pizzaName">Фрутті ді маре</p>
+                        <div class="orderInfo">
+                            <p class="pizzaPrice">450 грн</p>
+                            <button class="orderButton">В коробку</button>
+                        </div>                        
+                    </div>            
+                </div>
+            </section>
+        </div>
+
+        <div  class="pizzaType">
+            <p>Регіональні піци</p>
+            <section class="pizzaCatalog">
+                <div class="pizzaOffer">
+                    <div class="pizzaDisplay">
+                        <p class="parameter mass">400г</p>
+                        <p class="parameter diameter">25см</p>
+                        <img src="images/Неаполітанська піца.jpg" alt="Неаполітанська піца">
+                    </div>            
+                    <div class="pizzaDescription">
+                        <p class="pizzaName">Неаполітанська</p>
+                        <div class="orderInfo">
+                            <p class="pizzaPrice">250 грн</p>
+                            <button class="orderButton">В коробку</button>
+                        </div>
+                        
+                    </div>            
+                </div>
+    
+                <div class="pizzaOffer">
+                    <div class="pizzaDisplay">
+                        <p class="parameter mass">300г</p>
+                        <p class="parameter diameter">25см</p>
+                        <img src="images/Сицилійська піца.jpg" alt="Сицилійська піца">
+                    </div>            
+                    <div class="pizzaDescription">
+                        <p class="pizzaName">Сицилійська піца</p>
+                        <div class="orderInfo">
+                            <p class="pizzaPrice">250 грн</p>
+                            <button class="orderButton">В коробку</button>
+                        </div>                        
+                    </div>            
+                </div>
+    
+                <div class="pizzaOffer">
+                    <div class="pizzaDisplay">
+                        <p class="parameter mass">300г</p>
+                        <p class="parameter diameter">25см</p>
+                        <img src="images/Чиказька піца.jfif" alt="Чиказька піца">
+                    </div>            
+                    <div class="pizzaDescription">
+                        <p class="pizzaName">Чиказька піца</p>
+                        <div class="orderInfo">
+                            <p class="pizzaPrice">250 грн</p>
+                            <button class="orderButton">В коробку</button>
+                        </div>                        
+                    </div>            
+                </div>            
+            </section>
+        </div>
     </main>
     <footer></footer>
 </body>
