@@ -24,7 +24,7 @@ main > p{
     box-shadow: 0 7px 5px grey;  
 }
 .mainMenu img{
-    margin: 10px;
+    margin: 4px;
 }
 .icon {
     display: flex;
@@ -33,7 +33,7 @@ main > p{
     justify-content: flex-end;    
 }
 .iconBasket:hover{
-    background-color: #FAE52C;
+    background-color: #FAE52C;    
     border-radius: 5px;
     transition: background-color 0.8s;
 }
@@ -49,18 +49,19 @@ main > p{
     padding: 0;
 }
 .mainMenu li{
-    display: flex;
+    /*display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
 }
 .mainMenu li a{
     display: inline-block;
     color: black;
     text-align: center;
     
-    padding: 26px 30px;
+    text-wrap:nowrap;
+    padding: 10px 26px;/*<-----*/
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
 }
 .mainMenu li:hover{
     background-color: #FAE52C;
@@ -71,21 +72,31 @@ main > p{
     background-color: tomato;
     border-radius: 5px;    
 }
-
-@media(max-width:1370px){
+@media(max-width:545px){
     .mainMenu ul{
-        flex: 60%
+        flex-direction: column;
     }
-    .mainMenu li{
-        flex: 50%
-    }
-    .mainMenu .icon {
-        flex: 20%;        
-    }
-    .mainMenu li a{
-        padding: 10px 30px;
-    }    
 }
+@media(min-width:545px) and (max-width:600px){
+    .mainMenu li{
+        flex: 50%;
+    }
+}
+@media(min-width:600px) and (max-width:830px){
+    .mainMenu li{
+        flex: 33.33%;
+    }
+}
+@media(min-width:830px){
+    .mainMenu li{
+        flex: 20%;
+    }
+    .mainMenu ul{             
+        width: 80%;
+    }
+}
+
+
 /*----------------------------- Home page adv -----------------------------*/
  .advertisement{
     display: flex;   
@@ -109,13 +120,13 @@ main > p{
 
 /*----------------------------- Pizzeria description -----------------------------*/
 #pizzeriaDescription{
-    font-size: 23px;
+    /*font-size: 23px;*/
     width: 90%;
     text-align: justify;
     line-height: 1.8;
     margin-left:5% ;
 }
-.specialSpan{
+/*.specialSpan{
     font: italic bold 30px 'Brush Script MT', cursive;
     color: #d1af02;
     background-color: #636363;
@@ -123,7 +134,7 @@ main > p{
 
     border: 2px solid black;    
     border-radius: 5px;  
-}
+}*/
 /*----------------------------- Main information -----------------------------*/
 .mainInformation{
     width: 90%;
@@ -142,13 +153,16 @@ main > p{
     border-color: transparent;
     transition: border-color 0.8s;
 }
+.informationItemImg{
+    width: 40px;
+    height: 40px;
+}
 .mainInformationItem p{
-    font-size: 23px;
+    /*font-size: 23px;*/
     margin-left: 20px;
 }
 .mainInformationItem:hover{
-    border-color: #8a7302;
-    
+    border-color: #8a7302;    
 }
 /*----------------------------- Pizza list -----------------------------*/
 .pizzaList{
@@ -169,7 +183,19 @@ main > p{
 .pizzaListItems ul{
     list-style-image: url('images/pizza\ piece\ icon.png') ;
 } 
-@media(max-width:1100px){
+@media(max-width:500px){
+    .pizzaList{
+        width: 98%;
+        margin-left: 1%;
+    }
+}
+@media(min-width:500px) and (max-width:900px){
+    .pizzaList{
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+@media(min-width:900px) {
     .pizzaList{
         width: 40%;
         margin-left: 30%;
@@ -200,11 +226,27 @@ main > p{
     width:40%;
     margin-left: 30%;
 }
-@media(max-width:1000px){
+
+@media(max-width:520px){
+    .userForm{
+        width: 100%;        
+    }
+}
+@media(min-width:520px) and (max-width:900px){
+    .userForm{
+        width: 60%;       
+    }
+}
+@media(min-width:900px) {
+    .userForm{
+        width: 40%;        
+    }
+}
+/* @media(max-width:1000px){
     .userForm{   
         width:45%;
     }
-}
+} */
 /*----------------------------------------------------------*/
 /*----------------------------- Pizza -----------------------------*/
 /*----------------------------------------------------------*/
@@ -226,7 +268,8 @@ main > p{
 .pizzaCatalog{         
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    
+    justify-content: center;
     align-content: flex-start;
     gap: 80px;
 }
@@ -302,6 +345,7 @@ main > p{
 .orderButton:hover{
     background-color: #eeea25;
 }
+
 /*----------------------------------------------------------*/
 /*----------------------------- Registration Page -----------------------------*/
 /*----------------------------------------------------------*/
@@ -352,4 +396,9 @@ main > p{
 }
 .orderList .orderInfo{
     height: 45px;
+}
+@media(max-width:620px){    
+    .buyerOrder .orderList{
+        justify-content: center;         
+    }
 }
